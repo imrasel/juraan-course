@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: .4s cubic-bezier(0.77, 0.18, 0.31, 0.98);
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+}
+
+.welcome-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/images/welcome-bg.png');
+  height: 600px;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header-area {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+}
+
+.header {
+  width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo {
+  padding-top: 25px;
+  float: left;
+}
+.logo a{
+  font-family: 'Playball', cursive;
+  font-size: 35px;
+  text-decoration: none;
+  color: #fff;
+
+}
+.logo a:hover {
+  color: #c5b2a2;
+}
+.menu {
+  float: right;
+  margin-top: 25px;
+}
+.menu ul{
+  list-style: none;
+}
+.menu li{
+  float: left;
+  padding: 10px 20px;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  color: #c5b2a2;
+} 
+
+
+
+.welcome {
+  width: 630px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.welcome h1 {
+  font-size: 50px;
+}
+.welcome p {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1.7;
+}
+
+.purchase {
+ margin-top: 30px;
+}
+.purchase a {
+  background-color: #c5b2a2;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.purchase a:hover {
+  background-color: #a0826a;
+}
+.product-area {
+  width: 100%;
+  margin-top: 120px;
+  overflow: hidden;
+}
+.product-area h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.product {
+  width: 1100px;
+  margin: 0 auto;
+}
+.product .item {
+  float: left;
+  width: 250px;
+  height: 240px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.product .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.item:hover .overlay {
+  transform: scale(1);
+}
+
+.item:hover img {
+  transform: scale(1.3);
+}
+
+.item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  background-color: rgba(0, 0, 0, 0.384);
+  overflow: hidden;
+}
+
+.item .overlay .name {
+  position: absolute;
+  color: #fff;
+  text-transform: capitalize;
+  left: 39%;
+  top: 20%;
+  font-weight: bold;
+}
+
+.item .overlay .add {
+  margin-top: 110px;
+  margin-left: 60px;
+  position: absolute;
+}
+
+.item .overlay a {
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  padding: 7px 0;
+  width: 130px;
+  position: absolute;
+  text-align: center;
+}
+.item .overlay a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.product .item-row {
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.footer-area {
+  width: 100%;
+  height: 250px;
+  margin-top: 120px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.footer p {
+  padding-top: 120px;
+  font-size: 17px;
+  color: #cec6c6;
+}
+
+#cart-count-wrapper {
+  background-color: rgb(180, 174, 174);
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  padding: 10px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#cart-wrapper {
+  position: fixed;
+  height: 0;
+  width: 100%;
+  background-color: rgba(19, 18, 18, 0.719);
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#cart {
+  /* height: 500px; */
+  width: 700px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #fff;
+}
+
+#close {
+  position: absolute;
+  font-size: 50px;
+  top: 3%;
+  right: 3%;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-item-wrapper {
+  overflow: hidden;
+}
+.cart-item-wrapper h4{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+#cart h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  height: 90px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.cart-item p {
+  float: left;
+  margin: 35px 49px;
+}
+
+.cart-item img {
+  height: 72%;
+    float: left;
+    margin: 10px 27px;
+    border: 3px solid #ccc;
+}
+
+.checkout {
+  overflow: hidden;
+  float: right;
+}
+
+.checkout p {
+  margin-top: 25px;
+  float: left;
+  margin-bottom: 30px;
+}
+
+.checkout-btn {
+  float: left;
+    margin: 20px;
+    background-color: rgb(146, 100, 100);
+    border: none;
+    padding: 8px 20px;
+    color: #fff;
+    cursor: pointer;
+} 
+.remove-btn {
+  cursor: pointer;
+}
